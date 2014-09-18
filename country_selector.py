@@ -1,12 +1,12 @@
 
-from PyQt5 import QtWidgets
+from PySide import QtGui
 
 from ui_country_selector import Ui_CountrySelector
 
 from countrycode import countrycode
 from countries import countries
 
-class CountrySelector(QtWidgets.QDialog):
+class CountrySelector(QtGui.QDialog):
     def __init__(self, parent=None):
         super(CountrySelector, self).__init__(parent)
         ui = Ui_CountrySelector()

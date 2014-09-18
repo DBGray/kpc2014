@@ -6,8 +6,8 @@ project(CountryCode)
 set(CMAKE_MODULE_PATH 
   "${CMAKE_CURRENT_SOURCE_DIR}/CMake" ${CMAKE_MODULE_PATH}
 )
-include(FindPyQt5)
-find_package(PyQt5 REQUIRED)
+include(FindPySide)
+find_package(PySide REQUIRED)
 
 
 message(STATUS "PYUIC5BINARY ${PYUIC5BINARY}" )
@@ -17,7 +17,7 @@ include(FindPythonInterp 2.7)
 
 set(ui country_selector.ui)
 
-PYQT5_WRAP_UI(ui_gen ${ui})
+PYSIDE_WRAP_UI(ui_gen ${ui})
 
 set(PYINSTALLER_DIR ${CMAKE_CURRENT_SOURCE_DIR}/pyinstaller)
 
